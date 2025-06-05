@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio website of Yash Zagade, a professional web developer.">
+  <title>Yash Zagade | Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="Portfolio.css"/>
+
+  <style>
+  
+    html {
+      scroll-behavior: smooth;
+    }
+
+   
+    #contact {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    #contact.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header class="header">
+    <a href="#home" class="logo">Yash<span>Zagade</span></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="gradient-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+  </header>
+
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Hi, It's <span>Yash</span></h1>
+      <h3>I'm a <span>Web Developer</span></h3>
+      <p>I build modern websites using HTML, CSS, JavaScript, and Spring Boot. I'm passionate about delivering performance-driven and beautiful digital experiences.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+      </div>
+      <div class="btn-group">
+        <a href="#" class="btn">Hire</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </div>
+    <div class="home-img">
+      <img src="./IMG_3180.jpg" alt="Yash Zagade" />
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="./IMG_3180.jpg" alt="About Yash" />
+    </div>
+    <div class="about-content">
+      <h2>About <span>Me</span></h2>
+      <p>I am a passionate web developer with a strong foundation in front-end and back-end technologies. I specialize in creating responsive, user-friendly applications with modern frameworks and tools.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  
+  <section class="services" id="services">
+    <h2 class="section-title">My <span>Services</span></h2>
+    <div class="services-container">
+      <div class="service-card">
+        <i class="bx bx-code-alt"></i>
+        <h3>Web Development</h3>
+        <p>Building responsive and dynamic websites using HTML, CSS, JS, React & Spring Boot.</p>
+      </div>
+      <div class="service-card">
+        <i class="bx bx-mobile-alt"></i>
+        <h3>Mobile Optimization</h3>
+        <p>Creating fast, responsive, and mobile-friendly designs for seamless experiences.</p>
+      </div>
+      <div class="service-card">
+        <i class="bx bx-server"></i>
+        <h3>Backend Development</h3>
+        <p>Developing RESTful APIs, secure authentication, and databases with Spring Boot.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="projects" id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Online Food Ordering System" />
+        <h3>Online Food Ordering System</h3>
+        <p>
+          A full-stack web application allowing customers to browse menus and place orders, while admins manage restaurant data.
+          Developed using Spring Boot, JPA, JDBC for backend and React for frontend. Secure, responsive, and optimized for performance.
+        </p>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Portfolio Website" />
+        <h3>Portfolio Website</h3>
+        <p>
+          A personal portfolio showcasing my work, skills, and contact details. Built with HTML5 and CSS3 featuring a modern UI theme, animated buttons, and responsive layout.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="contact-container">
+      <p><strong>Name:</strong> Yash Zagade</p>
+      <p><strong>Phone:</strong> +91 8208293099</p>
+      <p><strong>Email:</strong> <a href="mailto:yashzagade08@gmail.com">yashzagade08@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yash-zagade-759783266/" target="_blank" rel="noopener noreferrer">linkedin.com/in/yashzagade</a></p>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <p>© 2025 Yash Zagade. All rights reserved.</p>
+  </footer>
+
+  <script src="Portfolio.js"></script>
+
+  <script>
+   
+    window.addEventListener('load', () => {
+      const contactSection = document.getElementById('contact');
+      contactSection.classList.add('visible');
+    });
+  </script>
+
+</body>
+</html>
